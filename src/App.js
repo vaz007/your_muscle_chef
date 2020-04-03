@@ -1,9 +1,10 @@
 import React from 'react';
 
+import Index from './Component/index'
 function App() {
   return (
       <div className = "ui container">
-        <h1>Your Muscle Chef</h1>
+          <Index />
      </div>
   );
 }
