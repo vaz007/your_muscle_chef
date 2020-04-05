@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../Images/logo192.png";
+import logo from "./Images/logo192.png";
 import AddShoppingCartOutlinedIcon from "@material-ui/icons/AddShoppingCartOutlined";
 
 import { Link } from "react-router-dom";

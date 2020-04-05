@@ -8,11 +8,6 @@ import Cover from "./Images/signin_register.jpg";
 
 import "./CSS/SignIn.css";
 
-const Check = ({ input, meta: { touched, error } }) => (
-  <div style={{ border: touched && error ? "1px solid red" : "" }}>
-    <input type="checkbox" {...input} />
-  </div>
-);
 
 const renderField = ({
   input,
@@ -61,37 +56,73 @@ class SignIn extends Component {
 
   render() {
     return (
-        <div>
-        <img src = {Cover} />
-         <div class="ui placeholder segment" id = "segment"> 
-          <div class="ui two column very relaxed stackable grid">
-            <div class="column">
-              <div class="ui form">
-                <div class="field">
-                  <label>Username</label>
-                  <div class="ui left icon input">
-                    <input type="text" placeholder="Username" />
-                    <i class="user icon" />
+      <div>
+        <img src={Cover} alt="cover" />
+        <div className="ui placeholder segment" id="segment">
+          <form onSubmit={this.handleSubmit} className="FormField">
+            <div className="ui two column very relaxed stackable grid">
+              <div className="column">
+                <div className="ui form">
+                  <div className="FormField">
+                    <label className="FormField__Label" htmlFor="email">
+                      E-Mail Address
+                    </label>
+                    <Field
+                      label="E-mail"
+                      className="FormField__Input"
+                      type="email"
+                      id="email"
+                      placeholder="Enter your email"
+                      name="email"
+                      autoComplete="off"
+                      value={this.state.email}
+                      onChange={this.handleChange}
+                      component={renderField}
+                    />
                   </div>
-                </div>
-                <div class="field">
-                  <label>Password</label>
-                  <div class="ui left icon input">
-                    <input type="password" />
-                    <i class="lock icon"></i>
+                  <div className="FormField">
+                    <label className="FormField__Label" htmlFor="password">
+                      Password
+                    </label>
+                    <Field
+                      label="Must Be 8 characters"
+                      type="password"
+                      id="password"
+                      className="FormField__Input"
+                      placeholder="Enter your password"
+                      name="password"
+                      autoComplete="off"
+                      value={this.state.password}
+                      onChange={this.handleChange}
+                      component={renderField}
+                    />
                   </div>
+                  <div className="ui submit button" className="FormField__Button">
+                    Login
+                  </div>{" "}
+                  <br />
+                  <Link to="/signup" className="FormField__Link">
+                    Not a member Join Now
+                  </Link>
                 </div>
-                <div class="ui blue submit button">Login</div>
+              </div>
+
+              <div className="middle aligned column">
+                <div className="socialButton">
+                  <button className="ui facebook button">
+                    <i className="facebook icon"></i>
+                    Facebook
+                  </button>
+
+                  <button className="ui google plus button">
+                    <i className="google plus icon"></i>
+                    Google Plus
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="middle aligned column">
-              <div class="ui big button">
-                <i class="signup icon"></i>
-                Sign Up
-              </div>
-            </div>
-          </div>
-          <div class="ui vertical divider">Or</div>
+            <div className="ui vertical inverted divider">Or</div>
+          </form>
         </div>
       </div>
     );
