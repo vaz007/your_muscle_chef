@@ -16,7 +16,7 @@ const renderField = ({
   meta: { touched, error, warning },
 }) => (
   <div>
-    <div>
+    <div style = {{color : "red"}}>
       <input
         {...input}
         placeholder={label}
@@ -56,10 +56,14 @@ class SignIn extends Component {
 
   render() {
     return (
-      <div>
+      <section>
+      <div className = "signIn">
         <img src={Cover} alt="cover" />
+        
         <div className="ui placeholder segment" id="segment">
+          
           <form onSubmit={this.handleSubmit} className="FormField">
+         
             <div className="ui two column very relaxed stackable grid">
               <div className="column">
                 <div className="ui form">
@@ -125,6 +129,7 @@ class SignIn extends Component {
           </form>
         </div>
       </div>
+      </section>
     );
   }
 }
