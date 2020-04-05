@@ -63,7 +63,7 @@ class SignUp extends Component {
     return (
       <section>
         <div className="signIn">
-          <img src={Cover} alt="cover" />
+          <img src={Cover} alt="cover"/>
 
           <div className="ui placeholder segment" id="signUpSegment">
             <form onSubmit={this.handleSubmit} className="FormField">

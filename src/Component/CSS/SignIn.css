@@ -4,10 +4,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 520px;
   height: 420px;
-  position: absolute;
   box-sizing: border-box;
   text-align: center;
   padding: 70px 30px;
@@ -18,13 +16,11 @@
 #signUpSegment {
   z-index: 999;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  width: 520px;
+  width: 620px;
   height: 520px;
-  position: absolute;
   box-sizing: border-box;
   text-align: center;
   padding: 70px 30px;
