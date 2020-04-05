@@ -21,7 +21,7 @@ const renderField = ({
   meta: { touched, error, warning },
 }) => (
   <div>
-    <div style = {{color : "red"}}>
+    <div style={{ color: "red" }}>
       <input
         {...input}
         placeholder={label}
