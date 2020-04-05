@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import Index from './Component/index'
+import Index from "./Component/index";
+
+import SignIn from './Component/SignIn'
+
+
 function App() {
   return (
-      <div className = "ui container">
-          <Index />
-     </div>
+    <div>
+     <Index />
+    </div>
   );
 }
 
