@@ -5,16 +5,14 @@ export default class FacebookAuth extends Component {
         
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '559682971325310',
+      appId      : '{your-app-id}',
       cookie     : true,
       xfbml      : true,
       version    : '{api-version}'
     });
       
     FB.AppEvents.logPageView();   
-    FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-    });
+      
   };
     }
     render() {
