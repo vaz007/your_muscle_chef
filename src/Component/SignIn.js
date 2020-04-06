@@ -6,6 +6,8 @@ import validate from "./Validation/validate";
 
 import Cover from "./Images/signin_register.jpg";
 
+import GoogleAuth from '../Component/GoogleAuth'
+
 import "./CSS/SignIn.css";
 
 const renderField = ({
@@ -45,12 +47,15 @@ class SignIn extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("The form was submitted with the following data:");
-    if (Object.keys(validate(this.state)).length > 0) {
-      return alert("Please Check all the details");
-    } else {
-      console.log("The form was submitted with the following data:");
-      console.log(this.state);
-    }
+
+    // Add code for the modal if errors popped 
+
+    // if (Object.keys(validate(this.state)).length > 0) {
+    //   return alert("Please Check all the details");
+    // } else {
+    //   console.log("The form was submitted with the following data:");
+    //   console.log(this.state);
+    // }
   };
 
   render() {
@@ -117,11 +122,8 @@ class SignIn extends Component {
                       <i className="facebook icon"></i>
                       Facebook
                     </button>
-
-                    <button className="ui google plus button">
-                      <i className="google plus icon"></i>
-                      Google Plus
-                    </button>
+                    {/* Add client id in google auth to check google login button */}
+                    <GoogleAuth />
                   </div>
                 </div>
               </div>

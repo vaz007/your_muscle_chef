@@ -4,10 +4,9 @@ import { Router, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import Menu from "./Menu";
+import Menu from "./Menu/Menu";
 import FrontPage from "./FrontPage";
-
-// import Sign from './Sign'
+import Cart from './Cart/Cart';
 
 
 import history from "../history";
@@ -24,6 +23,7 @@ export default class index extends Component {
           <Route path="/signin" exact component={SignIn} />
           <Route path="/signup" exact component={SignUp} />
           <Route path="/menu" exact component={Menu} />
+          <Route path = "/cart" exact component={Cart} />
         </Switch>
       </Router>
     );
