@@ -8,6 +8,8 @@ import Cover from "./Images/signin_register.jpg";
 
 import GoogleAuth from '../Component/GoogleAuth'
 
+import FacebookAuth from './FacebookAuth'
+
 import "./CSS/SignIn.css";
 
 const renderField = ({
@@ -118,10 +120,7 @@ class SignIn extends Component {
 
                 <div className="middle aligned column">
                   <div className="socialButton">
-                    <button className="ui facebook button">
-                      <i className="facebook icon"></i>
-                      Facebook
-                    </button>
+                    <FacebookAuth />
                     {/* Add client id in google auth to check google login button */}
                     <GoogleAuth />
                   </div>
