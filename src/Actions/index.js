@@ -1,11 +1,13 @@
 // All the actions 
-// import history from '../history';
+import history from '../history';
 
-export const signIn = userId => {
-  return {
+export const signIn = userId => async dispatch => {
+  dispatch ({
     type: "SIGN_IN",
     payload: userId
-  };
+  
+  })
+  history.push("/")
 };
 
 export const signOut = () => {
