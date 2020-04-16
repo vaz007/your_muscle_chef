@@ -45,7 +45,9 @@ export default class Navbar extends Component {
           Sign-Up
         </Link>
         <div className="right item">
+          <Link to = "/cart">
           <AddShoppingCartOutlinedIcon />
+        </Link>
         </div>
       </div>
     );

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { signIn, signOut } from "../Actions";
+import { signIn, signOut } from '../redux-helpers/Actions/cartActions';
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { Link, withRouter } from "react-router-dom";
 import history from '../history'
 
-const responseFacebook = (response) => {
-    console.log(response);
-    history.push("/")
+// const responseFacebook = (response) => {
+//     console.log(response);
+//     history.push("/")
         
-    return response;
-  };
+//     return response;
+//   };
 
   const renderButton = (renderProps) => {
     return (
@@ -41,6 +41,7 @@ class FacebookAuth extends Component {
           picture: response.picture.data.url,
         });
         this.props.signIn(this.state.userId)
+        history.push("/")
         
       };
     
@@ -59,7 +60,7 @@ class FacebookAuth extends Component {
           appId="app id"
           autoLoad={false}
           fields="name,email,picture"
-          callback={responseFacebook}
+          callback={this.responseFacebook}
           render={(renderProps) => renderButton(renderProps)}
         />
       );

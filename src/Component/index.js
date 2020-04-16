@@ -4,8 +4,8 @@ import { Router, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import Menu from "./Menu/Menu";
 import FrontPage from "./FrontPage";
+import Menu from "./Menu/Products";
 import Cart from './Cart/Cart';
 
 
