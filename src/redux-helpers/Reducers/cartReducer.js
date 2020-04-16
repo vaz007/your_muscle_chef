@@ -34,9 +34,10 @@ export default (state = initialState, action) => {
     // Delete Item 
 
     case DELETE_ITEM:
+        console.log(state.cartItems)
         return {
             ...state,
-            cartItems : state.cartItems.filer(item => item.id !== action.payload)
+            cartItems : state.cartItems.filter(item => item.id !== action.payload)
         }
 
 

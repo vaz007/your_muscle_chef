@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import { showCart, addItem } from "../../redux-helpers/Actions/cartActions";
 
 import CartItem from "./CartItem";
-import TotalAmount from './TotalAmount'
+import TotalAmount from "./TotalAmount";
+import "../CSS/Menu.css";
 class Cart extends Component {
   showCart = () => {
     const { showCart } = this.props;
@@ -16,7 +17,11 @@ class Cart extends Component {
     const { cartItems } = this.props.cart;
     console.log(cartItems);
     if (cartItems.length === 0) {
-      return <div class="ui medium header" style = {{textAlign: "center", paddingTop: "3rem"}}>Your cart looks empty</div>
+      return (
+        <div class="ui medium header" id="header">
+          Your cart looks empty
+        </div>
+      );
     } else {
       return cartItems.map((item) => {
         return (
@@ -34,12 +39,12 @@ class Cart extends Component {
     if (cartItems.length === 0) {
       return;
     } else {
-        return <TotalAmount />
+      return <TotalAmount />;
     }
-  }
+  };
   render() {
     return (
-      <div class = "ui container" style = {{marginTop: "10rem"}}>
+      <div class="ui container" style={{ marginTop: "10rem" }}>
         {this.renderCartList()}
         {this.renderTotal()}
       </div>
