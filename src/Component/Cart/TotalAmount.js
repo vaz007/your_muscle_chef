@@ -9,19 +9,26 @@ class TotalAmount extends Component {
   render() {
     const { totalPrice } = this.props.cart;
     return (
-      <div className="total-amount">
-        <p>
-          <strong>Delivery : </strong>
-          <span>Free</span>
-        </p>
-        <p>
-          <strong style = {{marginRight: "3px"}}> Total </strong>
-          <FontAwesomeIcon icon={faRupeeSign} style = {{marginRight: "3px"}}/> {totalPrice}
-        </p>
-        <div className="text-center">
-          <button type="button" className="btn-custom disabled" disabled>
+      <div className="ui grid">
+        <div class="ten wide column"></div>
+        <div class="six wide column">
+          <p style ={{textAlign: "right"}}>
+            <strong>Delivery : </strong>
+            <span>Free</span>
+          </p>
+
+          <p style ={{textAlign: "right", marginLeft : "3rem"}}>
+            <strong> Total </strong>
+            <FontAwesomeIcon
+              icon={faRupeeSign}
+            />{" "}
+            {totalPrice}
+          </p>
+
+          <button className="ui right floated red button">
             Go to checkout
           </button>
+
         </div>
       </div>
     );

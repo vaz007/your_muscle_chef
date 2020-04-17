@@ -5,6 +5,7 @@
       "title": "Winter body",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       "price": 110,
+      "macros" : "61 Cal | 64 Protein",
       "img": "../images/Item1"
     },
     {
@@ -12,6 +13,7 @@
       "title": "Adidas",
       "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.",
       "price": 80,
+      
       "img": "../images/Item2"
     },
     {

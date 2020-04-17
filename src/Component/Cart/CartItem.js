@@ -31,6 +31,7 @@ class CartItem extends Component {
     const { item } = this.props;
     console.log(item);
     return (
+      
       <div className="ui celled grid">
         <div className="row">
           <div className="three wide column">
