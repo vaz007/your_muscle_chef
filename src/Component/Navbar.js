@@ -35,7 +35,7 @@ export default class Navbar extends Component {
           </div>
         </div>
 
-        <Link to="" className="item">
+        <Link to="/delivery" className="item">
           Dilevery
         </Link>
         <Link to="/signin" className="item">

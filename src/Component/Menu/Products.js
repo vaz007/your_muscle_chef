@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import { addItem, fetchData } from "../../redux-helpers/Actions/cartActions";
 import { connect } from "react-redux";
 
-// import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRupeeSign } from "@fortawesome/free-solid-svg-icons";
 import Spinner from "./Spinner";
 import "../CSS/Menu.css";
 
+
+import Background from '../Images/background_image.png'
+
 class Products extends Component {
   componentDidMount() {
-    // this.props.data();
-    // console.log(this.props);
     this.props.fetchData();
   }
   addClick = (product) => {
@@ -54,12 +54,18 @@ class Products extends Component {
   }
   render() {
     return (
-      <div className="ui container" style={{ marginTop: "10rem" }}>
+    <section>
+      <div className = "products">
+        {/* <img src={Background} alt="cover" id = "Background_Image" /> */}
+      <div className="ui container">
         <h2 className="ui center aligned header" id="header">
+
           Build Your Meal with us
         </h2>
         <div className="ui special cards">{this.renderList()}</div>
       </div>
+      </div>
+      </section>
     );
   }
 }

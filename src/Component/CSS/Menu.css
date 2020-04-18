@@ -1,10 +1,22 @@
 #card {
-    margin-right: 70px;
+  margin-right: 70px;
+  
 }
 #header {
-    padding-bottom: 50px;
-    font-family: 'Pacifico', cursive;
-    font-size: 40px;
-    color: black;
-    font-weight: 300;
+  padding-bottom: 50px;
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  color: black;
+  font-weight: 300;
+  padding-top: 85px;
+}
+#container {
+  z-index: 999;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  right: 30%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  opacity: 0.8;
 }

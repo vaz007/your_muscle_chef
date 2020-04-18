@@ -8,7 +8,7 @@ import FrontPage from "./FrontPage";
 import Menu from "./Menu/Products";
 import Cart from './Cart/Cart';
 
-
+import GoogleMap from './Delivery/GoogleMap'
 import history from "../history";
 
 export default class index extends Component {
@@ -24,6 +24,7 @@ export default class index extends Component {
           <Route path="/signup" exact component={SignUp} />
           <Route path="/menu" exact component={Menu} />
           <Route path = "/cart" exact component={Cart} />
+          <Route path = "/delivery" exact component={GoogleMap} />
         </Switch>
       </Router>
     );
