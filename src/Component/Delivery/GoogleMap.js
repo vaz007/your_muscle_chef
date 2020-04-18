@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
 
-import Maps from "./GoogleMap";
 
 const mapStyles = {
-    marginTop: '50%',
     width: '100%',
-    height: '50%'
-
+    height: '90%',
   };
 
 class GoogleMap extends Component {
@@ -21,6 +18,7 @@ class GoogleMap extends Component {
 
   render() {
     return (
+    <div className = "ui container">
         <Map
         google={this.props.google}
         zoom={14}
@@ -30,9 +28,10 @@ class GoogleMap extends Component {
          lng: 36.8233
         }}
       />
+      </div>
     );
   }
 }
 export default GoogleApiWrapper({
-    apiKey: 'API KEY'
+    apiKey: 'Api_Key'
   })(GoogleMap);

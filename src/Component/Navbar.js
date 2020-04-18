@@ -10,7 +10,7 @@ export default class Navbar extends Component {
       <div className="ui inverted top fixed menu">
         <div className="item">
           <Link to="/">
-            <img src={logo} alt = "Logo" style={{ height: "2rem" }} />
+            <img src={logo} alt="Logo" style={{ height: "2rem" }} />
           </Link>
         </div>
         <Link to="menu" className="item">
@@ -45,9 +45,9 @@ export default class Navbar extends Component {
           Sign-Up
         </Link>
         <div className="right item">
-          <Link to = "/cart">
-          <AddShoppingCartOutlinedIcon />
-        </Link>
+          <Link to="/cart">
+            <AddShoppingCartOutlinedIcon />
+          </Link>
         </div>
       </div>
     );
