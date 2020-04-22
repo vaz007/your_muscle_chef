@@ -6,9 +6,9 @@ import validate from "./Validation/validate";
 
 import Cover from "../Images/signin_register.jpg";
 
-import GoogleAuth from './GoogleAuth'
+import GoogleAuth from "./GoogleAuth";
 
-import FacebookAuth from './FacebookAuth'
+import FacebookAuth from "./FacebookAuth";
 
 import "./StyleSheetAuthentication.css";
 
@@ -50,7 +50,7 @@ class SignIn extends Component {
     e.preventDefault();
     console.log("The form was submitted with the following data:", this.state);
 
-   // Add code for the modal if errors popped 
+    // Add code for the modal if errors popped
 
     if (Object.keys(validate(this.state)).length > 0) {
       return alert("Please Check all the details");
@@ -60,10 +60,7 @@ class SignIn extends Component {
     }
   };
 
-
-  renderSignInPage() {
-
-  }
+  renderSignInPage() {}
 
   render() {
     return (
@@ -113,8 +110,8 @@ class SignIn extends Component {
                     <div
                       className="ui submit button"
                       className="FormField__Button"
-                      onClick = {this.handleSubmit}
-                   >
+                      onClick={this.handleSubmit}
+                    >
                       Login
                     </div>{" "}
                     <br />
@@ -132,14 +129,10 @@ class SignIn extends Component {
                   </div>
                 </div>
               </div>
-              </form>
+            </form>
           </div>
         </div>
-
-
       </section>
-
-
     );
   }
 }
