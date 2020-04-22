@@ -3,28 +3,30 @@ import {
     ADD_ITEM,
     DELETE_ITEM,
     UPDATE_PRICE,
-    DECREMENT_QTY
+    DECREMENT_QTY,
+    FETCH_DATA
   } from './types';
 
   
 import axios from "../../api/axios";
   
-import history from '../../history';
+// import history from '../../history';
 
-export const signIn = userId => async dispatch => {
-  dispatch ({
-    type: "SIGN_IN",
-    payload: userId
+
+// export const signIn = userId => async dispatch => {
+//   dispatch ({
+//     type: "SIGN_IN",
+//     payload: userId
   
-  })
-  history.push("/")
-};
+//   })
+//   history.push("/")
+// };
 
-export const signOut = () => {
-  return {
-    type: "SIGN_OUT"
-  };
-};
+// export const signOut = () => {
+//   return {
+//     type: "SIGN_OUT"
+//   };
+// };
 
 
 
@@ -67,7 +69,7 @@ export const fetchData = () => async (dispatch) => {
     const response = await axios.get("/items");
     console.log(response);
     dispatch({
-      type: "FETCH_DATA",
+      type: FETCH_DATA,
       payload: response.data,
     });
   };

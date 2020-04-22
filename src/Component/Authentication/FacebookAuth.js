@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { signIn, signOut } from '../redux-helpers/Actions/cartActions';
+import { signIn, signOut } from '../../redux-helpers/Actions/authenticationAction';
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import { Link, withRouter } from "react-router-dom";
-import history from '../history'
+import history from '../../history.js'
 
 // const responseFacebook = (response) => {
 //     console.log(response);

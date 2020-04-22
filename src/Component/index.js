@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
 import Navbar from "./Navbar";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
+
+import SignIn from "../Component/Authentication/SignIn";
+import SignUp from "../Component/Authentication/SignUp";
+
 import FrontPage from "./FrontPage";
 import Menu from "./Menu/Products";
 import Cart from './Cart/Cart';

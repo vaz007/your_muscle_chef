@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRupeeSign } from "@fortawesome/free-solid-svg-icons";
-import Spinner from "./Spinner";
-import "../CSS/Menu.css";
+import Spinner from "../Spinner";
+import "./Menu.css";
 
 
 import Background from '../Images/background_image.png'

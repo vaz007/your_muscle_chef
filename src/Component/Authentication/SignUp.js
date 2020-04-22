@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
 import validate from "./Validation/validate";
 
-import Cover from "./Images/signin_register.jpg";
+import Cover from "../Images/signin_register.jpg";
 
-import "./CSS/SignIn.css";
+import "./StyleSheetAuthentication.css";
 
 const Check = ({ input, meta: { touched, error } }) => (
   <div style={{ border: touched && error ? "1px solid red" : "" }}>
@@ -63,7 +63,7 @@ class SignUp extends Component {
     return (
       <section>
         <div className="signIn">
-          <img src={Cover} alt="cover"/>
+          <img src={Cover} alt="cover" id = "cover"/>
 
           <div className="ui placeholder segment" id="signUpSegment">
             <form onSubmit={this.handleSubmit} className="FormField">
@@ -147,7 +147,6 @@ class SignUp extends Component {
                   </div>
                 </div>
               </div>
-              <div className="ui vertical inverted divider">Or</div>
             </form>
           </div>
         </div>

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
 import validate from "./Validation/validate";
 
-import Cover from "./Images/signin_register.jpg";
+import Cover from "../Images/signin_register.jpg";
 
-import GoogleAuth from '../Component/GoogleAuth'
+import GoogleAuth from './GoogleAuth'
 
 import FacebookAuth from './FacebookAuth'
 
-import "./CSS/SignIn.css";
+import "./StyleSheetAuthentication.css";
 
 const renderField = ({
   input,
@@ -48,17 +48,22 @@ class SignIn extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("The form was submitted with the following data:");
+    console.log("The form was submitted with the following data:", this.state);
 
-    // Add code for the modal if errors popped 
+   // Add code for the modal if errors popped 
 
-    // if (Object.keys(validate(this.state)).length > 0) {
-    //   return alert("Please Check all the details");
-    // } else {
-    //   console.log("The form was submitted with the following data:");
-    //   console.log(this.state);
-    // }
+    if (Object.keys(validate(this.state)).length > 0) {
+      return alert("Please Check all the details");
+    } else {
+      console.log("The form was submitted with the following data:");
+      console.log(this.state);
+    }
   };
+
+
+  renderSignInPage() {
+
+  }
 
   render() {
     return (
@@ -108,7 +113,8 @@ class SignIn extends Component {
                     <div
                       className="ui submit button"
                       className="FormField__Button"
-                    >
+                      onClick = {this.handleSubmit}
+                   >
                       Login
                     </div>{" "}
                     <br />
@@ -126,11 +132,14 @@ class SignIn extends Component {
                   </div>
                 </div>
               </div>
-              <div className="ui vertical inverted divider">Or</div>
-            </form>
+              </form>
           </div>
         </div>
+
+
       </section>
+
+
     );
   }
 }

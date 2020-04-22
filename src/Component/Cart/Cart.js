@@ -4,7 +4,7 @@ import { showCart, addItem } from "../../redux-helpers/Actions/cartActions";
 
 import CartItem from "./CartItem";
 import TotalAmount from "./TotalAmount";
-import "../CSS/Menu.css";
+import "../Menu/Menu.css";
 class Cart extends Component {
   showCart = () => {
     const { showCart } = this.props;
